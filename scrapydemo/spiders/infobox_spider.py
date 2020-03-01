@@ -1,3 +1,7 @@
+from configparser import ConfigParser
+from urllib.parse import urlparse
+
+import psycopg2
 import scrapy
 
 # -*- coding: utf-8 -*-
@@ -6,34 +10,97 @@ import scrapy
 import re
 import unicodedata
 from scrapy.crawler import CrawlerProcess
-from urllib.parse import urlparse
+
+from configparser import ConfigParser
+from configdb import configdb
+
+class InfoboxSpider(scrapy.Spider):
+    name = 'infobox_spider'
+
+    from configparser import ConfigParser
+    def convert(self, item, value):
+        listField = ["Industry", "Key people", "Subsidiaries"]
+        if item in listField:
+            print("item is the list: " + item)
+            li = list(value.split(","))
+            print("li is: " + str(li))
+            return str(li)
+        return value
 
 
-class WikiSpider(scrapy.Spider):
-    name = 'wiki_company'
+
+    def connect(self):
+        """ Connect to the PostgreSQL database server """
+        conn = None
+        name_list = []
+        try:
+            # read connection parameters
+            params = configdb()
+
+            # connect to the PostgreSQL server
+            print('Connecting to the PostgreSQL database...')
+            conn = psycopg2.connect(**params)
+
+            # create a cursor
+            cur = conn.cursor()
+
+            # execute a statement
+            cur.execute('select distinct name from patentassignees;')
+
+            # display the PostgreSQL database server version
+            db_version = cur.fetchall()
+            name_list = [tuple[0] for tuple in db_version]
+
+            # close the communication with the PostgreSQL
+            cur.close()
+        except (Exception, psycopg2.DatabaseError) as error:
+            print(error)
+        finally:
+            if conn is not None:
+                conn.close()
+                print('Database connection closed.')
+                return name_list
 
     # start_urls = ['https://en.wikipedia.org/wiki/Instagram']
 
+    # Two ways of getting URLS
     def get_urls(self):
-
         lines = [line.rstrip() for line in open("defense-company-list.tsv")]
         companylist = []
 
+
         for i in range(len(lines)):
-            if (i == 0):
+            if(i==0):
                 continue
             value = re.split(r'\t', lines[i])
-            if (len(value) == 2):
-                cleaned = value[1].replace(" ", "_")
+            if(len(value)==2):
+                cleaned = value[1].replace(" ","_")
                 cleaned = re.sub(r"\(.*\)", "", cleaned)
                 companylist.append(cleaned)
         output_url = ["https://en.wikipedia.org/wiki/" + x for x in companylist]
-        return output_url[:1000]
+        return output_url
+
+    def get_urls_fromDB(self, lines):
+
+        companylist = []
+        for i in range(len(lines)):
+                cleaned = lines[i].replace(" ","_")
+                cleaned = re.sub(r"\(.*\)", "", cleaned)
+                companylist.append(cleaned)
+        output_url = ["https://en.wikipedia.org/wiki/" + x for x in companylist]
+        return output_url
+
 
     def start_requests(self):
         urls = self.get_urls()
+
+        #name_list = InfoboxSpider.connect(self)
+        #urls = self.get_urls_fromDB(name_list)
+        #print("urls are" + str(urls))
+
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
+
 
     def parse(self, response):
         parsed_uri = urlparse(response.url)
@@ -49,6 +116,7 @@ class WikiSpider(scrapy.Spider):
             value = re.sub(r' \)', ') ', value)
             value = re.sub(r'\[\d.*\]', ' ', value)
             value = re.sub(r' +', ' ', value)
+            value = value.replace('"', '')
             return value.strip()
 
         strings = []
@@ -99,6 +167,7 @@ class WikiSpider(scrapy.Spider):
                 item = re.sub(r' +', ' ', item)
                 item = item.strip()
 
+
                 if row.xpath('td/div/ul/li'):
                     value = []
                     for li in row.xpath('td/div/ul/li'):
@@ -122,8 +191,13 @@ class WikiSpider(scrapy.Spider):
                 value = re.sub(r' \)', ') ', value)
                 value = re.sub(r'\[\d\]', ' ', value)
                 value = re.sub(r' +', ' ', value)
+                value = value.replace('"', '')
                 value = value.strip()
-                info_card[item] = value
+
+                # convert string list into list of strings
+                # info_card[item] = InfoboxSpider.convert(item, value)
+                # InfoboxSpider.convert(self, item, value)
+                info_card[item] = InfoboxSpider.convert(self, item, value)
         # print(info_card)
         # print("received")
 
