@@ -4,7 +4,7 @@ from urllib.parse import urlparse
 import psycopg2
 import scrapy
 
-# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*
 
 import scrapy
 import re

@@ -1,27 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e37d652-4605-404f-9f9c-fff60b863bed" name="Default Changelist" comment="add data ingestion">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configdb.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrapydemo/database.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrapydemo/defense_infojson2csv.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrapydemo/rsc/Screen Shot 2020-02-06 at 5.46.18 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrapydemo/rsc/Screen Shot 2020-02-06 at 5.47.23 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrapydemo/spiders/database.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrapydemo/spiders/defense_info_result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrapydemo/spiders/infobox_spider.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrapydemo/spiders/updated_info_result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrapydemo/updated_infojson2csv.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrapydemo/urlChecker.py" afterDir="false" />
+    <list default="true" id="9e37d652-4605-404f-9f9c-fff60b863bed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/scrapydemo/output-result2.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapydemo/defense-company-list.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapydemo/json2csv.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapydemo/result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapydemo/spiders/wiki_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydemo/spiders/wiki_spider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapydemo/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydemo/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapydemo/spiders/infobox_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydemo/spiders/infobox_spider.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +118,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scrapydemo/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scrapydemo/json2csvTool.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -216,7 +199,7 @@
       <workItem from="1582348020974" duration="10024000" />
       <workItem from="1582392516365" duration="6482000" />
       <workItem from="1582854063767" duration="2286000" />
-      <workItem from="1583077541413" duration="693000" />
+      <workItem from="1583077541413" duration="1218000" />
     </task>
     <task id="LOCAL-00001" summary="add data ingestion">
       <created>1581040527680</created>
@@ -225,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581040527680</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ADD POSTGRESQL functions">
+      <created>1583078449433</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583078449433</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +237,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add data ingestion" />
-    <option name="LAST_COMMIT_MESSAGE" value="add data ingestion" />
+    <MESSAGE value="ADD POSTGRESQL functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD POSTGRESQL functions" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/scrapydemo$Linkedin_scrapy.coverage" NAME="Linkedin_scrapy Coverage Results" MODIFIED="1579208852207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scrapydemo" />
