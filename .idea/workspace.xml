@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e37d652-4605-404f-9f9c-fff60b863bed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scrapydemo/output-result2.json" afterDir="false" />
+    <list default="true" id="9e37d652-4605-404f-9f9c-fff60b863bed" name="Default Changelist" comment="update filename">
+      <change afterPath="$PROJECT_DIR$/scrapydemo/patent.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrapydemo/result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrapydemo/spiders/bswebsite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrapydemo/spiders/crs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrapydemo/spiders/patent_spider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrapydemo/spiders/patent_spider_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrapydemo/spiders/simple.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrapydemo/spiders/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrapydemo/utils/database.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrapydemo/utils/inset2db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrapydemo/spiders/infobox_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydemo/spiders/infobox_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapydemo/database.ini" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydemo/database.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapydemo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydemo/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrapydemo/spiders/database.ini" beforeDir="false" afterPath="$PROJECT_DIR$/scrapydemo/spiders/database.ini" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +50,35 @@
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="postgres: database" type="162271b6:PgImplModel$Database" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@awesome-hw.sdsc.edu" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@awesome-hw.sdsc.edu" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@awesome-hw.sdsc.edu" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@awesome-hw.sdsc.edu" type="feb32156:DbDataSourceImpl" />
+        <item name="roles" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
     </expand>
     <select />
   </component>
@@ -56,6 +96,11 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="postgresql" />
@@ -70,19 +115,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.urlChecker">
+  <component name="RunManager" selected="Python.test">
     <configuration name="Linkedin_scrapy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="scrapydemo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -97,6 +130,50 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scrapydemo/Linkedin_scrapy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="bswebsite" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="scrapydemo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scrapydemo/spiders" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scrapydemo/spiders/bswebsite.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="inset2db" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="scrapydemo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scrapydemo/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scrapydemo/utils/inset2db.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -151,25 +228,24 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.urlChecker" />
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.inset2db" />
+        <item itemvalue="Python.bswebsite" />
+        <item itemvalue="Python.urlChecker" />
         <item itemvalue="Python.Linkedin_scrapy" />
       </list>
     </recent_temporary>
   </component>
   <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@78398608" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
-          <select />
-        </treeState>
-      </serviceView>
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
     </option>
   </component>
   <component name="SvnConfiguration">
@@ -199,7 +275,10 @@
       <workItem from="1582348020974" duration="10024000" />
       <workItem from="1582392516365" duration="6482000" />
       <workItem from="1582854063767" duration="2286000" />
-      <workItem from="1583077541413" duration="1218000" />
+      <workItem from="1583077541413" duration="2475000" />
+      <workItem from="1583125139820" duration="5000" />
+      <workItem from="1585420043876" duration="30287000" />
+      <workItem from="1589235598123" duration="3466000" />
     </task>
     <task id="LOCAL-00001" summary="add data ingestion">
       <created>1581040527680</created>
@@ -215,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583078449433</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update filename">
+      <created>1583079032835</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583079032835</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,11 +324,29 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add data ingestion" />
     <MESSAGE value="ADD POSTGRESQL functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD POSTGRESQL functions" />
+    <MESSAGE value="update filename" />
+    <option name="LAST_COMMIT_MESSAGE" value="update filename" />
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/scrapydemo$Linkedin_scrapy.coverage" NAME="Linkedin_scrapy Coverage Results" MODIFIED="1579208852207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scrapydemo" />
-    <SUITE FILE_PATH="coverage/scrapydemo$test.coverage" NAME="test Coverage Results" MODIFIED="1582397224806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scrapydemo" />
-    <SUITE FILE_PATH="coverage/scrapydemo$urlChecker.coverage" NAME="urlChecker Coverage Results" MODIFIED="1582398312299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scrapydemo" />
+  <component name="WindowStateProjectService">
+    <state width="1358" height="238" key="GridCell.Tab.0.bottom" timestamp="1586228479530">
+      <screen x="0" y="23" width="1920" height="970" />
+    </state>
+    <state width="1358" height="238" key="GridCell.Tab.0.bottom/0.23.1920.970@0.23.1920.970" timestamp="1586228479530" />
+    <state width="1358" height="238" key="GridCell.Tab.0.center" timestamp="1586228479529">
+      <screen x="0" y="23" width="1920" height="970" />
+    </state>
+    <state width="1358" height="238" key="GridCell.Tab.0.center/0.23.1920.970@0.23.1920.970" timestamp="1586228479529" />
+    <state width="1358" height="238" key="GridCell.Tab.0.left" timestamp="1586228479528">
+      <screen x="0" y="23" width="1920" height="970" />
+    </state>
+    <state width="1358" height="238" key="GridCell.Tab.0.left/0.23.1920.970@0.23.1920.970" timestamp="1586228479528" />
+    <state width="1358" height="238" key="GridCell.Tab.0.right" timestamp="1586228479529">
+      <screen x="0" y="23" width="1920" height="970" />
+    </state>
+    <state width="1358" height="238" key="GridCell.Tab.0.right/0.23.1920.970@0.23.1920.970" timestamp="1586228479529" />
+    <state x="639" y="340" key="com.intellij.ide.util.TipDialog" timestamp="1586228391847">
+      <screen x="0" y="23" width="1920" height="970" />
+    </state>
+    <state x="639" y="340" key="com.intellij.ide.util.TipDialog/0.23.1920.970@0.23.1920.970" timestamp="1586228391847" />
   </component>
 </project>
